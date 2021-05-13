@@ -1,0 +1,17 @@
+n = int(input())
+lst_1= list(map(int,input().split()))[:n]
+# lst_1 = []
+# for i in range (0,n):
+#     number = int(input())
+#     lst_1.append(number)
+# #print(lst_1)
+# n = len(lst_1)
+mx = max(lst_1[0],lst_1[1])
+secondmax = min(lst_1[0],lst_1[1])
+for i in range (2,n):
+    if lst_1[i]>mx:
+        secondmax = mx
+        mx = lst_1[i]
+    elif lst_1[i]>secondmax and mx != lst_1[i]:
+        secondmax = lst_1[i]
+print(secondmax)
