@@ -1,0 +1,21 @@
+if __name__ == '__main__':
+    n = []
+    s = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        n.append(name)
+        s.append(score)
+    a = max(s)
+    b = min(s)
+    
+    for i in range(len(n)):
+        if s[i]<a and s[i]>b:
+            a = s[i]
+    f = []
+    for j in range(len(s)):
+        if s[j] == a:
+            f.append(n[j])
+    
+    f.sort()
+    print (*f,sep = "\n")
