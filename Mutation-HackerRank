@@ -1,0 +1,19 @@
+def mutate_string(s, i, c):
+    t = s[:i] + c + s[i+1:] 
+    return t
+
+if __name__ == '__main__':
+    s = input()
+    i, c = input().split()
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)
+    
+    # we can solve this by another method too
+    
+ s = input()
+ i , c = input().split()
+ int(i)
+ l = list(s)
+ l[i] = c
+ mutate_string = ''.join(l)
+ print(mutate_string)
