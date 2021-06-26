@@ -1,0 +1,10 @@
+import textwrap
+def wrap(str,mw):
+    words = textwrap.fill(str,mw)
+    return words
+    
+    return loop()
+if __name__ == '__main__':
+    string, max_width = raw_input(), int(raw_input())
+    result = wrap(string, max_width)
+    print result
